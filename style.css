@@ -1,6 +1,6 @@
 body {
-    background-color: aliceblue;
-    font-family: 'Menlo', 'Consolas', 'Source Code Pro', monospace;
+    background-color: white;
+    font-family: monospace;
 }
 
 .Header {
@@ -8,45 +8,20 @@ body {
 }
 
 .Text {
-    height: 60px;
-    width: auto;
     font-size: 20px;
     text-align: center;
 }
 
 .Link {
-    .Txt {
-        font-size: 20px;
-        height: 10px;
-        width: auto;
-        text-align: center;
-        transition: all 0.5s;
-        font-weight: bold;
-        color: blue;
-    }
-    
-    .Lne {
-        margin: auto;
-        background-color: blue;
-        height: 5px;
-        width: 0px;
-        transition: all 0.5s;
-    }
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    transition: all 0.3s;
+    font-weight: bold;
+    color: blue;
+    text-decoration: none;
 }
 
 .Link:hover {
-    .Txt {
-        font-size: 20px;
-        height: 10px;
-        width: auto;
-        text-align: center;
-        font-weight: bold;
-        color: rgb(30, 154, 226);
-    }
-    .Lne {
-        margin: auto;
-        background-color: blue;
-        height: 5px;
-        width: 125px;
-    }
+    color: rgb(30, 154, 226);
 }
