@@ -14,14 +14,14 @@ body {
 
 .Link {
     display: block !important;
-    font-size: 20px;
-    text-align: center;
-    transition: all 0.3s;
-    font-weight: bold;
-    color: blue;
-    text-decoration: none;
+    font-size: 20px !important;
+    text-align: center !important;
+    transition: all 0.3s !important;
+    font-weight: bold !important;
+    color: blue !important;
+    text-decoration: none !important;
 }
 
 .Link:hover {
-    color: rgb(30, 154, 226);
+    color: rgb(30, 154, 226) !important;
 }
