@@ -13,7 +13,7 @@ body {
 }
 
 .Link {
-    display: block;
+    display: block !important;
     font-size: 20px;
     text-align: center;
     transition: all 0.3s;
