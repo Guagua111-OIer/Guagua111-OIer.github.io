@@ -19,12 +19,12 @@
   <meta name="author" content="Guagua111">
   <meta name="keywords" content="">
   
-    <meta name="description" content="A+B Problem c++题解 这道题主要考察对编程语言的了解。实际上不用学太多知识，只要是有一个良好的编程环境，加上一点点语法知识，这道题就能AC（通过）。 思路 先说说这道题的思路 题目意思就是说让我们写一个程序，计算两数相加的和并输出。所以我们要用到输入输出的东西：cin和cout。其用法为:  输入一个整数  1cin &gt;&gt; a; 这里的 aaa 是我们输入进来的变量（当然">
+    <meta name="description" content="A+B Problem c++题解 这道题主要考察对编程语言的了解。实际上不用学太多知识，只要是有一个良好的编程环境，加上一点点语法知识，这道题就能AC（通过）。  思路 先说说这道题的思路 题目意思就是说让我们写一个程序，计算两数相加的和并输出。所以我们要用到输入输出的东西：cin和cout。其用法为:  输入一个整数  1cin &gt;&gt; a; 这里的 aaa 是我们输入进来的变量（">
 <meta property="og:type" content="article">
 <meta property="og:title" content="P1001 A+B Problem C++ 题解">
 <meta property="og:url" content="https://guaguaoier111.github.io/2025/08/08/P1001-A-B-Problem-C-%E9%A2%98%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Guagua111&#39;s Blog">
-<meta property="og:description" content="A+B Problem c++题解 这道题主要考察对编程语言的了解。实际上不用学太多知识，只要是有一个良好的编程环境，加上一点点语法知识，这道题就能AC（通过）。 思路 先说说这道题的思路 题目意思就是说让我们写一个程序，计算两数相加的和并输出。所以我们要用到输入输出的东西：cin和cout。其用法为:  输入一个整数  1cin &gt;&gt; a; 这里的 aaa 是我们输入进来的变量（当然">
+<meta property="og:description" content="A+B Problem c++题解 这道题主要考察对编程语言的了解。实际上不用学太多知识，只要是有一个良好的编程环境，加上一点点语法知识，这道题就能AC（通过）。  思路 先说说这道题的思路 题目意思就是说让我们写一个程序，计算两数相加的和并输出。所以我们要用到输入输出的东西：cin和cout。其用法为:  输入一个整数  1cin &gt;&gt; a; 这里的 aaa 是我们输入进来的变量（">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-08-08T07:11:58.000Z">
 <meta property="article:modified_time" content="2025-08-08T07:12:30.403Z">
@@ -44,6 +44,8 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
 
 
 
@@ -84,7 +86,11 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -275,21 +281,21 @@
             
               <div class="markdown-body">
                 
-                <h1>A+B Problem c++题解</h1>
+                <h1 id="ab-problem-c题解"><a class="markdownIt-Anchor" href="#ab-problem-c题解"></a> A+B Problem c++题解</h1>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1001">这道题</a>主要考察对编程语言的了解。实际上不用学太多知识，只要是有一个良好的编程环境，加上一点点语法知识，这道题就能AC（通过）。</p>
-<h2 id="思路">思路</h2>
+<h2 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h2>
 <p><strong>先说说这道题的思路</strong></p>
 <p>题目意思就是说让我们写一个程序，计算两数相加的和并输出。所以我们要用到输入输出的东西：cin和cout。其用法为:</p>
 <ul>
 <li>输入一个整数</li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">cin &gt;&gt; a;<br></code></pre></td></tr></table></figure>
-<p>这里的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> 是我们输入进来的变量（当然这里假设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> 已经被定义过）。</p>
+<p>这里的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 是我们输入进来的变量（当然这里假设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 已经被定义过）。</p>
 <ul>
 <li>输出一个整数</li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">cout &lt;&lt; a;<br></code></pre></td></tr></table></figure>
-<p>同理，这里的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span> 代指我们输出的数。</p>
+<p>同理，这里的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 代指我们输出的数。</p>
 <p>读到这里，你一定读懂cin和cout是怎么用的了吧。那么，这些好用的功能在哪里呢？</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">&lt;iostream&gt;<br></code></pre></td></tr></table></figure>
 <p>对了！我们平时写源代码时，用的就是这个库！</p>
@@ -303,24 +309,24 @@
 <ul>
 <li>名字必须是main</li>
 <li>类型一般都为int</li>
-<li>返回值必须为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span></li>
+<li>返回值必须为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></li>
 </ul>
-<p>名字必须为main，是因为不是main，编译器就会以为是其他的函数，就会因为找不到main函数而报错。<strong>至于返回值必须为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，是因为返回 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 表示程序正常结束，返回其他值编译器会认为程序出现了异常。虽然不会报错，但这样的代码会出现名叫“运行时错误”的错误，简称RE，在洛谷是得不了分的。</strong> 至于返回语句return，我就不给大家细讲了，感兴趣的可以<a target="_blank" rel="noopener" href="https://blog.csdn.net/mlyjqx/article/details/61621977">自行研究</a>。</p>
+<p>名字必须为main，是因为不是main，编译器就会以为是其他的函数，就会因为找不到main函数而报错。<strong>至于返回值必须为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>，是因为返回 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span> 表示程序正常结束，返回其他值编译器会认为程序出现了异常。虽然不会报错，但这样的代码会出现名叫“运行时错误”的错误，简称RE，在洛谷是得不了分的。</strong> 至于返回语句return，我就不给大家细讲了，感兴趣的可以<a target="_blank" rel="noopener" href="https://blog.csdn.net/mlyjqx/article/details/61621977">自行研究</a>。</p>
 <p>所以，我们就得到了程序的框架。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>接下来就是主要内容了。首先要输入两个数，那我们就先定义两个数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a, b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span></span></span></span>。再输入这两个数就可以了。于是，我们就得到了</p>
+<p>接下来就是主要内容了。首先要输入两个数，那我们就先定义两个数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a, b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span></span></span></span>。再输入这两个数就可以了。于是，我们就得到了</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span> a, b;<br>cin &gt;&gt; a &gt;&gt; b;<br></code></pre></td></tr></table></figure>
-<p>这里输入多个整数可以用上面这种方法，假设要输入三个整数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo separator="true">,</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a, b, c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">c</span></span></span></span>，就是：</p>
+<p>这里输入多个整数可以用上面这种方法，假设要输入三个整数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo separator="true">,</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a, b, c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">c</span></span></span></span>，就是：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">// cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br></code></pre></td></tr></table></figure>
 <p>当然，输出多个也一样，我就不细讲了。</p>
 <p>有人也许会问：要不要用long long这种64位存储类型？其实题目已经说了：</p>
-<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo>≤</mo><msup><mn>10</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">a, b \le 10 ^ 9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span>。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo>≤</mo><mn>1</mn><msup><mn>0</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">a, b \le 10 ^ 9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">9</span></span></span></span></span></span></span></span></span></span></span>。</p>
 <p>这个数目其实用int类型就可以存下。<strong>当然，有的题目非常狡猾，没告诉你要用long long，其实不用long long就错了。所以这种思考习惯其实是很好的。</strong></p>
-<p>那么，回归正题，我们已经完成了输入，接下来就是输出了。我们要输出的值是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a + b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span>，那么，我们就得到了：</p>
+<p>那么，回归正题，我们已经完成了输入，接下来就是输出了。我们要输出的值是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a + b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span>，那么，我们就得到了：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">cout &lt;&lt; a + b;<br></code></pre></td></tr></table></figure>
-<p>有人就有要问了，cout可以输出一个变量，这种表达式可以吗？实际上，cout除了输出变量之外，还可以输出值或表达式。这里的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a + b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span> 就是一个表达式。<strong>但要注意的是，cin并不能做到这一点，cin只能输入一个变量，不能输入值或表达式。</strong></p>
+<p>有人就有要问了，cout可以输出一个变量，这种表达式可以吗？实际上，cout除了输出变量之外，还可以输出值或表达式。这里的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a + b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span> 就是一个表达式。<strong>但要注意的是，cin并不能做到这一点，cin只能输入一个变量，不能输入值或表达式。</strong></p>
 <p>这样，我们的代码就写完了。接下来给大家展示我们写完的代码</p>
-<h1>代码</h1>
+<h1 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h1>
 <p><strong>展示一下最终的代码</strong></p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> a, b;<br>    cin &gt;&gt; a &gt;&gt; b;<br>    cout &lt;&lt; a + b;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
                 
@@ -450,7 +456,6 @@
 
   
   
-
 
 
 
@@ -659,49 +664,6 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        if (!window.MathJax) {
-          window.MathJax = {
-            tex    : {
-              inlineMath: { '[+]': [['$', '$']] }
-            },
-            loader : {
-              load: ['ui/lazy']
-            },
-            options: {
-              renderActions: {
-                insertedScript: [200, () => {
-                  document.querySelectorAll('mjx-container').forEach(node => {
-                    let target = node.parentNode;
-                    if (target.nodeName.toLowerCase() === 'li') {
-                      target.parentNode.classList.add('has-jax');
-                    }
-                  });
-                }, '', false]
-              }
-            }
-          };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
