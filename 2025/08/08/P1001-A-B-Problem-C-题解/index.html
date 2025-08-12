@@ -410,19 +410,23 @@
   
     <article id="comments" lazyload>
       
-  <div id="gitalk-container"></div>
+  <div id="valine"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#gitalk-container', function() {
-      Fluid.utils.createCssLink('/css/gitalk.css')
-      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
         var options = Object.assign(
-          {"clientID":"Ov23liRNTV7AsH4tRPl0","clientSecret":"843ed0b1ef60a8f9ad883d088baa4ad9329de9e7","repo":"blog-gitalk","owner":"Guagua111-OIer","admin":["Guagua111-OIer"],"language":"zh-CN","labels":["gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://shielded-brushlands-08810.herokuapp.com/https://github.com/login/oauth/access_token"},
+          {"appId":"kJ8sQmm5xg3m8xo6wlUyLDBf-MdYXbMMI","appKey":"PeLcj55hr0V7Z2ut1alRdoS2","path":"window.location.pathname","placeholder":"发表你的见解，支持 Markdown 语法哦！（邮箱与链接选填，昵称填写 QQ 号自动补全头像）","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":true,"recordIP":false,"serverURLs":"https://kj8sqmm5.api.lncldglobal.com","emojiCDN":null,"emojiMaps":null,"enableQQ":true},
           {
-            id: 'ac7bfc66eb1416f6c9f8c159a4737934'
+            el: "#valine",
+            path: window.location.pathname
           }
         )
-        var gitalk = new Gitalk(options);
-        gitalk.render('gitalk-container');
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
       });
     });
   </script>
