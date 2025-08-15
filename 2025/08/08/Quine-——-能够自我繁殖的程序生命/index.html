@@ -407,23 +407,25 @@
   
     <article id="comments" lazyload>
       
-  <div id="valine"></div>
+  <div id="twikoo"></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#valine', function() {
-      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+    Fluid.utils.loadComments('#comments', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
         var options = Object.assign(
-          {"appId":"kJ8sQmm5xg3m8xo6wlUyLDBf-MdYXbMMI","appKey":"PeLcj55hr0V7Z2ut1alRdoS2","path":"window.location.pathname","placeholder":"发表你的见解，支持 Markdown 语法哦！（邮箱与链接选填，昵称填写 QQ 号自动补全头像）","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":true,"recordIP":false,"serverURLs":"https://kj8sqmm5.api.lncldglobal.com","emojiCDN":null,"emojiMaps":null,"enableQQ":true},
+          {"envId":"https://gua-twikoo.netlify.app/.netlify/functions/twikoo","region":"ap-shanghai","path":"window.location.pathname"},
           {
-            el: "#valine",
-            path: window.location.pathname
+            el: '#twikoo',
+            path: 'window.location.pathname',
+            onCommentLoaded: function() {
+              Fluid.utils.listenDOMLoaded(function() {
+                var imgSelector = '#twikoo .tk-content img:not(.tk-owo-emotion)';
+                Fluid.plugins.imageCaption(imgSelector);
+                Fluid.plugins.fancyBox(imgSelector);
+              });
+            }
           }
         )
-        new Valine(options);
-        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
-          var imgSelector = '#valine .vcontent img:not(.vemoji)';
-          Fluid.plugins.imageCaption(imgSelector);
-          Fluid.plugins.fancyBox(imgSelector);
-        })
+        twikoo.init(options)
       });
     });
   </script>
