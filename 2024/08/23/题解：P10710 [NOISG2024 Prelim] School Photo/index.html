@@ -19,23 +19,21 @@
   <meta name="author" content="Guagua111">
   <meta name="keywords" content="">
   
-    <meta name="description" content="警告：切勿将本文章任何内容用于任何非法用途。包含但不限于制作病毒，抄袭。\color{red}\texttt{\footnotesize{警告：切勿将本文章任何内容用于任何非法用途。}} \\ \color{red}\texttt{\footnotesize{包含但不限于制作病毒，抄袭。}}警告：切勿将本文章任何内容用于任何非法用途。包含但不限于制作病毒，抄袭。 声明：本文原创 你是否有过一个念头">
+    <meta name="description" content="思路 这道题我们使用双指针来解。 我们将 aaa 数组拍平成一维数组，然后排序。利用 aaa 数组的有序性，维护两个指针 l,rl, rl,r 表示左边界与右边界。 接下来，我们会遇到两种情况：第一种，[l,r][l, r][l,r] 这个区间里没有包含所有的班级。这时我们将 rrr 自增。第二种，[l,r][l, r][l,r] 包含了所有的班级。这时更新答案 ansansans，并令 lll">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Quine —— 能够自我繁殖的程序生命">
-<meta property="og:url" content="https://guaguaoier111.github.io/2025/08/08/Quine-%E2%80%94%E2%80%94-%E8%83%BD%E5%A4%9F%E8%87%AA%E6%88%91%E7%B9%81%E6%AE%96%E7%9A%84%E7%A8%8B%E5%BA%8F%E7%94%9F%E5%91%BD/index.html">
+<meta property="og:title" content="费马小定理">
+<meta property="og:url" content="https://guaguaoier111.github.io/2024/08/23/%E9%A2%98%E8%A7%A3%EF%BC%9AP10710%20[NOISG2024%20Prelim]%20School%20Photo/index.html">
 <meta property="og:site_name" content="Guagua111&#39;s Blog">
-<meta property="og:description" content="警告：切勿将本文章任何内容用于任何非法用途。包含但不限于制作病毒，抄袭。\color{red}\texttt{\footnotesize{警告：切勿将本文章任何内容用于任何非法用途。}} \\ \color{red}\texttt{\footnotesize{包含但不限于制作病毒，抄袭。}}警告：切勿将本文章任何内容用于任何非法用途。包含但不限于制作病毒，抄袭。 声明：本文原创 你是否有过一个念头">
+<meta property="og:description" content="思路 这道题我们使用双指针来解。 我们将 aaa 数组拍平成一维数组，然后排序。利用 aaa 数组的有序性，维护两个指针 l,rl, rl,r 表示左边界与右边界。 接下来，我们会遇到两种情况：第一种，[l,r][l, r][l,r] 这个区间里没有包含所有的班级。这时我们将 rrr 自增。第二种，[l,r][l, r][l,r] 包含了所有的班级。这时更新答案 ansansans，并令 lll">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="bilibili:BV1jWFTe6EiT">
-<meta property="article:published_time" content="2025-08-08T09:25:11.000Z">
-<meta property="article:modified_time" content="2025-08-08T09:25:28.844Z">
+<meta property="article:published_time" content="2024-08-23T05:32:00.000Z">
+<meta property="article:modified_time" content="2025-08-18T02:10:26.786Z">
 <meta property="article:author" content="Guagua111">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="bilibili:BV1jWFTe6EiT">
   
   
   
-  <title>Quine —— 能够自我繁殖的程序生命 - Guagua111&#39;s Blog</title>
+  <title>费马小定理 - Guagua111&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -207,7 +205,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Quine —— 能够自我繁殖的程序生命"></span>
+            <span id="subtitle" data-typed-text="费马小定理"></span>
           
         </div>
 
@@ -218,8 +216,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-08-08 17:25" pubdate>
-          2025年8月8日 下午
+        <time datetime="2024-08-23 13:32" pubdate>
+          2024年8月23日 下午
         </time>
       </span>
     
@@ -230,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          595 字
         
       </span>
     
@@ -241,7 +239,7 @@
         
         
         
-          10 分钟
+          5 分钟
         
       </span>
     
@@ -278,53 +276,22 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Quine —— 能够自我繁殖的程序生命</h1>
+            <h1 id="seo-header">费马小定理</h1>
             
             
               <div class="markdown-body">
                 
-                <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="red"><mstyle mathsize="0.8em"><mtext mathvariant="monospace">警告：切勿将本文章任何内容用于任何非法用途。</mtext></mstyle><mspace linebreak="newline"></mspace><mstyle mathcolor="red"><mstyle mathsize="0.8em"><mtext mathvariant="monospace">包含但不限于制作病毒，抄袭。</mtext></mstyle></mstyle></mstyle></mrow><annotation encoding="application/x-tex">\color{red}\texttt{\footnotesize{警告：切勿将本文章任何内容用于任何非法用途。}}
-\\
-\color{red}\texttt{\footnotesize{包含但不限于制作病毒，抄袭。}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.48888800000000004em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord sizing reset-size6 size4" style="color:red;"><span class="mord texttt cjk_fallback" style="color:red;">警</span><span class="mord texttt cjk_fallback" style="color:red;">告</span><span class="mord texttt cjk_fallback" style="color:red;">：</span><span class="mord texttt cjk_fallback" style="color:red;">切</span><span class="mord texttt cjk_fallback" style="color:red;">勿</span><span class="mord texttt cjk_fallback" style="color:red;">将</span><span class="mord texttt cjk_fallback" style="color:red;">本</span><span class="mord texttt cjk_fallback" style="color:red;">文</span><span class="mord texttt cjk_fallback" style="color:red;">章</span><span class="mord texttt cjk_fallback" style="color:red;">任</span><span class="mord texttt cjk_fallback" style="color:red;">何</span><span class="mord texttt cjk_fallback" style="color:red;">内</span><span class="mord texttt cjk_fallback" style="color:red;">容</span><span class="mord texttt cjk_fallback" style="color:red;">用</span><span class="mord texttt cjk_fallback" style="color:red;">于</span><span class="mord texttt cjk_fallback" style="color:red;">任</span><span class="mord texttt cjk_fallback" style="color:red;">何</span><span class="mord texttt cjk_fallback" style="color:red;">非</span><span class="mord texttt cjk_fallback" style="color:red;">法</span><span class="mord texttt cjk_fallback" style="color:red;">用</span><span class="mord texttt cjk_fallback" style="color:red;">途</span><span class="mord texttt cjk_fallback" style="color:red;">。</span></span></span></span><span class="mspace newline" style="color:red;"></span><span class="base"><span class="strut" style="height:0.48888800000000004em;vertical-align:0em;"></span><span class="mord text" style="color:red;"><span class="mord sizing reset-size6 size4" style="color:red;"><span class="mord texttt cjk_fallback" style="color:red;">包</span><span class="mord texttt cjk_fallback" style="color:red;">含</span><span class="mord texttt cjk_fallback" style="color:red;">但</span><span class="mord texttt cjk_fallback" style="color:red;">不</span><span class="mord texttt cjk_fallback" style="color:red;">限</span><span class="mord texttt cjk_fallback" style="color:red;">于</span><span class="mord texttt cjk_fallback" style="color:red;">制</span><span class="mord texttt cjk_fallback" style="color:red;">作</span><span class="mord texttt cjk_fallback" style="color:red;">病</span><span class="mord texttt cjk_fallback" style="color:red;">毒</span><span class="mord texttt cjk_fallback" style="color:red;">，</span><span class="mord texttt cjk_fallback" style="color:red;">抄</span><span class="mord texttt cjk_fallback" style="color:red;">袭</span><span class="mord texttt cjk_fallback" style="color:red;">。</span></span></span></span></span></span></p>
-<p>声明：本文原创</p>
-<p>你是否有过一个念头：“我要写一个能输出自己的程序！”<br />
-目的呢，可能是想要挑战、娱乐、炫耀。<br />
-但是，经过七七四十九般尝试，你依然没有研究出来这种程序。<br />
-不过，看完这篇文章，你就会 Get 到以前让你不敢相信的代码！<br />
-那就让我们尝试写一写吧！</p>
-<p>提示：我是 <code>C++</code> 党，所以本文的所有代码都是用 <code>C++</code> 编写的。不过，尽管你不会 <code>C++</code>，只要读懂了思路，稍加变通，我相信你也一定能成功！</p>
-<h1 id="part-1-一次大胆的尝试"><a class="markdownIt-Anchor" href="#part-1-一次大胆的尝试"></a> Part 1 一次大胆的尝试</h1>
-<p>首先，凡是代码都有框架：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="0.5em"><mtext mathvariant="monospace">注：这里省略了主函数以外的部分与主函数</mtext></mstyle></mrow><annotation encoding="application/x-tex">\texttt{\tiny{注：这里省略了主函数以外的部分与主函数}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.305555em;vertical-align:0em;"></span><span class="mord text"><span class="mord sizing reset-size6 size1"><span class="mord texttt cjk_fallback">注</span><span class="mord texttt cjk_fallback">：</span><span class="mord texttt cjk_fallback">这</span><span class="mord texttt cjk_fallback">里</span><span class="mord texttt cjk_fallback">省</span><span class="mord texttt cjk_fallback">略</span><span class="mord texttt cjk_fallback">了</span><span class="mord texttt cjk_fallback">主</span><span class="mord texttt cjk_fallback">函</span><span class="mord texttt cjk_fallback">数</span><span class="mord texttt cjk_fallback">以</span><span class="mord texttt cjk_fallback">外</span><span class="mord texttt cjk_fallback">的</span><span class="mord texttt cjk_fallback">部</span><span class="mord texttt cjk_fallback">分</span><span class="mord texttt cjk_fallback">与</span><span class="mord texttt cjk_fallback">主</span><span class="mord texttt cjk_fallback">函</span><span class="mord texttt cjk_fallback">数</span></span></span></span></span></span></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">cout &lt;&lt; <span class="hljs-string">&quot;...&quot;</span>;<br></code></pre></td></tr></table></figure>
-<p>然后，我们要将代码里的 <code>...</code> 替换成整个代码，注意特殊字符的转义：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">cout &lt;&lt; <span class="hljs-string">&quot;cout &lt;&lt; \&quot;...\&quot;&quot;</span>;<br></code></pre></td></tr></table></figure>
-<p>emmm，又出现了一个 <code>...</code>，按照规矩，我们应该把它也替换成整个代码。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">cout &lt;&lt; <span class="hljs-string">&quot;cout &lt;&lt; \&quot;cout &lt;&lt; \&quot;cout &lt;&lt; \&quot;...\&quot;\&quot;;\&quot;&quot;</span>;<br></code></pre></td></tr></table></figure>
-<p>emmm，还有一个 <code>...</code>，所以继续替换……<br />
-等等，你有没有发现什么不对劲的地方？</p>
-<h2 id="part-2-无法打破的-造物论"><a class="markdownIt-Anchor" href="#part-2-无法打破的-造物论"></a> Part 2 无法打破的 “造物论”</h2>
-<p>看着上方越来越长的代码，你不禁陷入深思。<br />
-照这么写，我的代码要写 INF 列啊！！！QWQ <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathsize="0.5em"><mtext mathvariant="monospace">注:INF是无穷大的意思。</mtext></mstyle></mrow><annotation encoding="application/x-tex">\texttt{\tiny{注:INF是无穷大的意思。}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.305555em;vertical-align:0em;"></span><span class="mord text"><span class="mord sizing reset-size6 size1"><span class="mord texttt cjk_fallback">注</span><span class="mord texttt">:</span><span class="mord texttt">I</span><span class="mord texttt">N</span><span class="mord texttt">F</span><span class="mord texttt cjk_fallback">是</span><span class="mord texttt cjk_fallback">无</span><span class="mord texttt cjk_fallback">穷</span><span class="mord texttt cjk_fallback">大</span><span class="mord texttt cjk_fallback">的</span><span class="mord texttt cjk_fallback">意</span><span class="mord texttt cjk_fallback">思</span><span class="mord texttt cjk_fallback">。</span></span></span></span></span></span><br />
-我们貌似发现了一个无法打破的理论，我们暂且称之为 “造物论”。该理论指出，任何一种物质，都只能由比其跟高级的物质造出。例如，汽车厂造出汽车，人类造出玩具。（我们的程序也可以由 <code>Windows</code> 强大的文件读写特性直接输出代码文件自己，但是过程中利用了 <code>Windows</code> 这种比代码复杂 10000 倍的东西，并没有违背定理。）</p>
-<p>所以貌似 “造物论” 开始阻拦我们的实现了。<br />
-但是，“造物论” 真的就无法打破吗？<br />
-答案是否定的。</p>
-<h2 id="part-3-自我繁殖的奥秘"><a class="markdownIt-Anchor" href="#part-3-自我繁殖的奥秘"></a> Part 3 自我繁殖的奥秘</h2>
-<p>微生物的繁殖，人类繁衍后代，植物授粉，无一不在做 “造物论” 的反例！大自然，就是我们成功的一丝希望！</p>
-<p>举个例子，乌龟的繁殖。<s>（真实画面请自行脑补，以下仅作参考）</s></p>
-<p><img src="bilibili:BV1jWFTe6EiT" srcset="/img/loading.gif" lazyload alt="" /></p>
-<p>程序，也可以用类似的方法进行繁殖。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;cstdio&gt;</span></span><br><span class="hljs-type">char</span> s[]=<span class="hljs-string">&quot;#include&lt;cstdio&gt;%cchar s[]=%c%s%c;%cint main()&#123;printf(s,10,34,s,34);&#125;&quot;</span>;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<span class="hljs-built_in">printf</span>(s,<span class="hljs-number">10</span>,<span class="hljs-number">34</span>,s,<span class="hljs-number">34</span>,<span class="hljs-number">10</span>);&#125;<br></code></pre></td></tr></table></figure>
-<p>我们可以先输出代码其他部分，将会重复的那一行单独存下来，通过 <code>printf()</code> 的特性将 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span></span></span></span> 的重复部分用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span></span></span></span> 替代。</p>
-<p><code>%c</code> 是指代特殊字符。因为特殊字符转义是包含两个字符，所以为了方便，我们用 <code>%c</code> 表示特殊字符。</p>
-<p><code>%s</code> 是字符串重复的位置，我们通过 <code>printf()</code> 将重复的部分替换。</p>
-<p>以上代码看上去码风很丑，不过这是为了使最后代码简洁。因为一旦加长代码，就会使 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span></span></span></span> 的长度增加。</p>
-<p>通过这种 “先将重复部分存下来不管，输出其他部分，最后在其他语句中将重复部分替换” 的思路，我们可以衍生出很多很多代码。比如这个：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">把括号里的内容抄一遍，再带括号抄一遍，最后加个句号（把括号里的内容抄一遍，再带括号抄一遍，最后加个句号）。<br></code></pre></td></tr></table></figure>
-<p><s>自然语言</s></p>
-<p>大家可以发现，按照这段话做一遍后，你会得到一个一模一样的段落！</p>
-<p>还有很多 Quine 程序的实现。大家可以查阅资料。能输出自己的程序，就这样被我们创造出来了！是不是不敢相信？到此，我们大功告成！</p>
-<h1 id="end"><a class="markdownIt-Anchor" href="#end"></a> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi>n</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">End</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord mathnormal">n</span><span class="mord mathnormal">d</span></span></span></span></h1>
+                <h2 id="思路"><a class="markdownIt-Anchor" href="#思路"></a> 思路</h2>
+<p>这道题我们使用双指针来解。</p>
+<p>我们将 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 数组拍平成一维数组，然后排序。利用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span></span></span></span> 数组的有序性，维护两个指针 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo separator="true">,</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">l, r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> 表示左边界与右边界。</p>
+<p>接下来，我们会遇到两种情况：第一种，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[l, r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 这个区间里没有包含所有的班级。这时我们将 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> 自增。第二种，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[l, r]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mclose">]</span></span></span></span> 包含了所有的班级。这时更新答案 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>n</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">ans</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">n</span><span class="mord mathnormal">s</span></span></span></span>，并令 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span></span></span></span> 自增以进一步寻找最优解。</p>
+<p>问题是，如何 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span> 判断区间里是否包含所有的班级呢？</p>
+<p>我们可以使用一个桶 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi></mrow><annotation encoding="application/x-tex">t</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathnormal">t</span></span></span></span> 来维护区间里每个教室的同学数量，并使用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mi>u</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">sum</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span><span class="mord mathnormal">u</span><span class="mord mathnormal">m</span></span></span></span> 记录区间里不同教室的数量。这时我们写出以下代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">if</span> (sum &lt; n) &#123; <span class="hljs-comment">//如果没有包含所有教室</span><br>	r++; <span class="hljs-comment">//右指针右移（新增一个同学）</span><br>	<span class="hljs-keyword">if</span> (t[a[r].c] == <span class="hljs-number">0</span>) sum++; <span class="hljs-comment">//如果这个同学来自一个新的教室，sum++</span><br>	t[a[r].c]++; <span class="hljs-comment">//他所在教师的人数 ++</span><br>&#125; <span class="hljs-keyword">else</span> &#123; <span class="hljs-comment">//如果包含了全部教室</span><br>	ans = <span class="hljs-built_in">min</span>(ans, a[r].h - a[l].h); <span class="hljs-comment">//更新答案</span><br>	t[a[l].c]--; <span class="hljs-comment">//由于将要失去左边界的同学，所以教室人数 --</span><br>	<span class="hljs-keyword">if</span> (t[a[l].c] == <span class="hljs-number">0</span>) sum--; <span class="hljs-comment">//这个教室没有学生了，意味着失去了一个教室，sum--</span><br>	l++; <span class="hljs-comment">//左边界右移</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>最后输出 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>n</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">ans</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">a</span><span class="mord mathnormal">n</span><span class="mord mathnormal">s</span></span></span></span> 即可。</p>
+<h2 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;algorithm&gt;</span> <span class="hljs-comment">//sort</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span> <span class="hljs-comment">//cin, cout</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-type">int</span> n, s, len, sum, t[<span class="hljs-number">1000005</span>], ans = <span class="hljs-number">0x7fffffff</span>;<br><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Node</span> &#123;<br>	<span class="hljs-type">int</span> c, h; <span class="hljs-comment">//c 表示教室，h 表示身高</span><br>	<span class="hljs-built_in">Node</span> (<span class="hljs-type">int</span> c = <span class="hljs-number">0</span>, <span class="hljs-type">int</span> h = <span class="hljs-number">0</span>) : <span class="hljs-built_in">c</span>(c), <span class="hljs-built_in">h</span>(h) <span class="hljs-comment">//构造函数</span><br>&#125; a[<span class="hljs-number">1000005</span>];<br><br><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">cmp</span><span class="hljs-params">(Node x, Node y)</span> </span>&#123; <span class="hljs-comment">//比较函数</span><br>	<span class="hljs-keyword">return</span> x.h &lt; y.h;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>	cin &gt;&gt; n &gt;&gt; s;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++) &#123;<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">1</span>; j &lt;= s; j++) &#123;<br>			<span class="hljs-type">int</span> h;<br>			cin &gt;&gt; h;<br>			a[++len] = <span class="hljs-built_in">Node</span>(i, h); <span class="hljs-comment">//输入</span><br>		&#125;<br>	&#125;<br>	<span class="hljs-built_in">sort</span>(a + <span class="hljs-number">1</span>, a + len + <span class="hljs-number">1</span>, cmp); <span class="hljs-comment">//排序</span><br>	<span class="hljs-type">int</span> l = <span class="hljs-number">1</span>, r = <span class="hljs-number">0</span>; <span class="hljs-comment">//定义左边界与右边界</span><br>	<span class="hljs-keyword">while</span> (l &lt;= len &amp;&amp; r &lt;= len) &#123;<br>		<span class="hljs-keyword">if</span> (sum &lt; n) &#123;<br>			r++;<br>			<span class="hljs-keyword">if</span> (t[a[r].c] == <span class="hljs-number">0</span>) sum++;<br>			t[a[r].c]++;<br>		&#125; <span class="hljs-keyword">else</span> &#123;<br>			ans = <span class="hljs-built_in">min</span>(ans, a[r].h - a[l].h);<br>			t[a[l].c]--;<br>			<span class="hljs-keyword">if</span> (t[a[l].c] == <span class="hljs-number">0</span>) sum--;<br>			l++;<br>		&#125;<br>	&#125;<br>	cout &lt;&lt; ans; <span class="hljs-comment">//输出答案</span><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<p>如果这篇题解能够通过，那么就是我的第一篇题解了。希望大家多多指教，也希望管理员认真审核！</p>
 
                 
               </div>
@@ -342,8 +309,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Quine —— 能够自我繁殖的程序生命</div>
-      <div>https://guaguaoier111.github.io/2025/08/08/Quine-——-能够自我繁殖的程序生命/</div>
+      <div>费马小定理</div>
+      <div>https://guaguaoier111.github.io/2024/08/23/题解：P10710 [NOISG2024 Prelim] School Photo/</div>
     </div>
     <div class="license-meta">
       
@@ -355,7 +322,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年8月8日</div>
+          <div>2024年8月23日</div>
         </div>
       
       
@@ -387,9 +354,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/08/15/%E8%B4%B9%E9%A9%AC%E5%B0%8F%E5%AE%9A%E7%90%86/" title="费马小定理">
+                      <a href="/2025/01/29/OIer%20%E6%8B%9C%E5%B9%B4%202025/" title="OIer 拜年 2025">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">费马小定理</span>
+                        <span class="hidden-mobile">OIer 拜年 2025</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -397,8 +364,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/08/08/P1001-A-B-Problem-C-%E9%A2%98%E8%A7%A3/" title="P1001 A+B Problem C++ 题解">
-                        <span class="hidden-mobile">P1001 A+B Problem C++ 题解</span>
+                      <a href="/2024/08/10/ATCoder%20366%20C%20%E9%A2%98%E9%A2%98%E8%A7%A3/" title="ATCoder 366 C 题题解">
+                        <span class="hidden-mobile">ATCoder 366 C 题题解</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
