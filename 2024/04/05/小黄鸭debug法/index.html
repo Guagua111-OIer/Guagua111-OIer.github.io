@@ -19,21 +19,23 @@
   <meta name="author" content="Guagua111">
   <meta name="keywords" content="">
   
-    <meta name="description" content="祝大家 2025 如贪心简单地最优，如暴力让快乐循环往复，如二分快速定位最美时刻，如三分掌握新年最高潮，如 Dijkstra 直达梦想彼岸，如动态规划步步最优解，如 BFS 在迷宫中掌握方向，如红黑树平衡稳定，如 ST 表越跳越优，如单调栈快乐越加越大，如快速排序 1 秒整理所有安排，如二叉树美好层层生根，最后预祝大家 2025 时空复杂度双 O(1)\mathcal O(1)O(1)，代码人生皆">
+    <meta name="description" content="不知大家有没有过敲完代码提交上去全WA，却查不出来错的经历。 这时就需要debug了。 debug的方法多种多样：有把变量值输出的，有把路径输出的，甚至还有重写的。总之，debug的方法非常多。 但是debug方法总是有缺点的。比如 jjj++ 写成 iii++，a−ba-ba−b 忘了取abs，nnn 写成 mmm，都有可能。但这些错一般的debug方法就查不出来了。 OIer中一种非常神奇的d">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OIer 拜年 2025">
-<meta property="og:url" content="https://guaguaoier111.github.io/2025/01/29/OIer%20%E6%8B%9C%E5%B9%B4%202025/index.html">
+<meta property="og:title" content="小黄鸭debug法">
+<meta property="og:url" content="https://guaguaoier111.github.io/2024/04/05/%E5%B0%8F%E9%BB%84%E9%B8%ADdebug%E6%B3%95/index.html">
 <meta property="og:site_name" content="Guagua111&#39;s Blog">
-<meta property="og:description" content="祝大家 2025 如贪心简单地最优，如暴力让快乐循环往复，如二分快速定位最美时刻，如三分掌握新年最高潮，如 Dijkstra 直达梦想彼岸，如动态规划步步最优解，如 BFS 在迷宫中掌握方向，如红黑树平衡稳定，如 ST 表越跳越优，如单调栈快乐越加越大，如快速排序 1 秒整理所有安排，如二叉树美好层层生根，最后预祝大家 2025 时空复杂度双 O(1)\mathcal O(1)O(1)，代码人生皆">
+<meta property="og:description" content="不知大家有没有过敲完代码提交上去全WA，却查不出来错的经历。 这时就需要debug了。 debug的方法多种多样：有把变量值输出的，有把路径输出的，甚至还有重写的。总之，debug的方法非常多。 但是debug方法总是有缺点的。比如 jjj++ 写成 iii++，a−ba-ba−b 忘了取abs，nnn 写成 mmm，都有可能。但这些错一般的debug方法就查不出来了。 OIer中一种非常神奇的d">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-01-29T03:59:00.000Z">
-<meta property="article:modified_time" content="2025-08-18T02:23:13.199Z">
+<meta property="og:image" content="https://img.zcool.cn/community/016140554434930000019ae9c22559.jpg?imageMogr2/auto-orient/thumbnail/1280x%3e/sharpen/0.5/quality/100/format/webp">
+<meta property="article:published_time" content="2024-04-05T00:01:00.000Z">
+<meta property="article:modified_time" content="2025-08-18T02:30:41.400Z">
 <meta property="article:author" content="Guagua111">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://img.zcool.cn/community/016140554434930000019ae9c22559.jpg?imageMogr2/auto-orient/thumbnail/1280x%3e/sharpen/0.5/quality/100/format/webp">
   
   
   
-  <title>OIer 拜年 2025 - Guagua111&#39;s Blog</title>
+  <title>小黄鸭debug法 - Guagua111&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,7 +207,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="OIer 拜年 2025"></span>
+            <span id="subtitle" data-typed-text="小黄鸭debug法"></span>
           
         </div>
 
@@ -216,8 +218,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-01-29 11:59" pubdate>
-          2025年1月29日 中午
+        <time datetime="2024-04-05 08:01" pubdate>
+          2024年4月5日 早上
         </time>
       </span>
     
@@ -228,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          143 字
+          276 字
         
       </span>
     
@@ -239,7 +241,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -276,12 +278,21 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">OIer 拜年 2025</h1>
+            <h1 id="seo-header">小黄鸭debug法</h1>
             
             
               <div class="markdown-body">
                 
-                <p>祝大家 2025 如贪心简单地最优，如暴力让快乐循环往复，如二分快速定位最美时刻，如三分掌握新年最高潮，如 Dijkstra 直达梦想彼岸，如动态规划步步最优解，如 BFS 在迷宫中掌握方向，如红黑树平衡稳定，如 ST 表越跳越优，如单调栈快乐越加越大，如快速排序 1 秒整理所有安排，如二叉树美好层层生根，最后预祝大家 2025 时空复杂度双 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">O</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathcal O(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>，代码人生皆 AK！</p>
+                <p>不知大家有没有过敲完代码提交上去全WA，却查不出来错的经历。</p>
+<p>这时就需要debug了。</p>
+<p>debug的方法多种多样：有把变量值输出的，有把路径输出的，甚至还有重写的。总之，debug的方法非常多。</p>
+<p>但是debug方法总是有缺点的。比如 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span>++ 写成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span>++，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>−</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a-b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">b</span></span></span></span> 忘了取abs，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 写成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi></mrow><annotation encoding="application/x-tex">m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">m</span></span></span></span>，都有可能。但这些错一般的debug方法就查不出来了。</p>
+<p>OIer中一种非常神奇的debug方法代代相传，是什么debug法呢？</p>
+<p>小黄鸭debug法！</p>
+<p><img src="https://img.zcool.cn/community/016140554434930000019ae9c22559.jpg?imageMogr2/auto-orient/thumbnail/1280x%3e/sharpen/0.5/quality/100/format/webp" srcset="/img/loading.gif" lazyload alt="" /></p>
+<p>没错，正是这只小黄鸭。</p>
+<p>你得一字一句的向它介绍你这一行代码是什么意思，你为什么要这样做，以及你这样做会发生什么。在一字一句的解释中，你会无意间发现自己代码的漏洞。然后你就可以修改漏洞，达到Debug的目的。等你跟小黄鸭介绍完你的代码之后，提交一下试试，说不定就AC了。</p>
+<p>这就是小黄鸭Debug法。真的很神奇哦！</p>
 
                 
               </div>
@@ -299,8 +310,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>OIer 拜年 2025</div>
-      <div>https://guaguaoier111.github.io/2025/01/29/OIer 拜年 2025/</div>
+      <div>小黄鸭debug法</div>
+      <div>https://guaguaoier111.github.io/2024/04/05/小黄鸭debug法/</div>
     </div>
     <div class="license-meta">
       
@@ -312,7 +323,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年1月29日</div>
+          <div>2024年4月5日</div>
         </div>
       
       
@@ -344,9 +355,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/01/29/Quine-%E2%80%94%E2%80%94-%E8%83%BD%E5%A4%9F%E8%87%AA%E6%88%91%E7%B9%81%E6%AE%96%E7%9A%84%E7%A8%8B%E5%BA%8F%E7%94%9F%E5%91%BD/" title="Quine —— 能够自我繁殖的程序生命">
+                      <a href="/2024/05/12/ATCoder%20353%20C%20-%20Sigma%20Problem/" title="ATCoder 353 C - Sigma Problem">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Quine —— 能够自我繁殖的程序生命</span>
+                        <span class="hidden-mobile">ATCoder 353 C - Sigma Problem</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -354,8 +365,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/23/%E9%A2%98%E8%A7%A3%EF%BC%9AP10710%20%5BNOISG2024%20Prelim%5D%20School%20Photo/" title="费马小定理">
-                        <span class="hidden-mobile">费马小定理</span>
+                      <a href="/2024/01/19/P1001-A-B-Problem-C-%E9%A2%98%E8%A7%A3/" title="P1001 A+B Problem C++ 题解">
+                        <span class="hidden-mobile">P1001 A+B Problem C++ 题解</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
