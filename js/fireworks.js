@@ -88,7 +88,7 @@ function animateParticules(e, t) {
       easing: "easeOutExpo",
       update: renderParticule
   }).add({
-      targets: a,
+      targets: n,
       radius: anime.random(80, 160) * 0.5, // 空心圆半径
       lineWidth: 0,
       alpha: {
