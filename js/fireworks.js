@@ -55,7 +55,7 @@ function animateParticules(e, t) {
     for (var a = createCircle(e, t), n = [], i = 0; i < numberOfParticules; i++)
         n.push(createParticule(e, t));
     anime.timeline().add({
-        targets: n,
+        targets: a,
         x: function(e) {
             return e.endPos.x
         },
