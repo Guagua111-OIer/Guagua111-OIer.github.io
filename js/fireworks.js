@@ -76,7 +76,7 @@ function animateParticules(e, t) {
   var a = createCircle(e, t, particleColors);
   
   anime.timeline().add({
-      targets: n,
+      targets: a,
       x: function(e) {
           return e.endPos.x;
       },
