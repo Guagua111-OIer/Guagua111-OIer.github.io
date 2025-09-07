@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://guaguaoier111.github.io/talk/talk.html</loc>
+    
+    <lastmod>2025-09-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://guaguaoier111.github.io/2024/04/05/%E5%B0%8F%E9%BB%84%E9%B8%ADdebug%E6%B3%95/</loc>
     
     <lastmod>2025-08-18</lastmod>
@@ -148,7 +157,7 @@
 
   <url>
     <loc>https://guaguaoier111.github.io/</loc>
-    <lastmod>2025-08-29</lastmod>
+    <lastmod>2025-09-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -156,7 +165,7 @@
   
   <url>
     <loc>https://guaguaoier111.github.io/tags/2024-05-01-12-54/</loc>
-    <lastmod>2025-08-29</lastmod>
+    <lastmod>2025-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
