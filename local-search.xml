@@ -4,19 +4,6 @@
   
   
   <entry>
-    <title></title>
-    <link href="/2026/08/17/AI%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E8%B6%8A%E8%81%8A%E8%B6%8A%E5%82%BB%EF%BC%9F/"/>
-    <url>/2026/08/17/AI%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E8%B6%8A%E8%81%8A%E8%B6%8A%E5%82%BB%EF%BC%9F/</url>
-    
-    <content type="html"><![CDATA[<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs subunit">title: AI为什么会越聊越傻？<br>date: 2026<span class="hljs-string">-7</span><span class="hljs-string">-5</span> 20:59<br><span class="hljs-keyword">tags:</span> 杂项<br></code></pre></td></tr></table></figure><blockquote><p>本篇由 Gemini 生成</p><p>提示词：为什么ai会随着对话的深入越来越傻？</p><p>Gemini 回答后，作者觉得很有道理，故保存</p></blockquote><p>你一定经历过这种痛苦的时刻：刚开始聊的时候，AI 还是个惊为天人的“天才”，但随着对话轮次变多、代码越改越长，它就开始不断犯些低级错误，甚至陷入死循环，变得像个“人工智障”。</p><p>这种“越聊越傻”的现象并不是你的错觉，在 AI 领域它有非常明确的技术底层原因。主要可以归结为以下四个核心瓶颈：</p><h3 id="1-记忆负担与注意力损耗attention-loss"><a class="markdownIt-Anchor" href="#1-记忆负担与注意力损耗attention-loss"></a> 1. 记忆负担与“注意力损耗”（Attention Loss）</h3><p>目前的大语言模型（LLM）都基于 Transformer 架构。虽然很多模型宣称有几十万甚至上百万代币（Tokens）的上下文窗口，但<strong>能记住</strong>和<strong>能精准理解</strong>是两码事。</p><ul><li><strong>“迷失在中间”（Lost in the Middle）</strong>：研究表明，AI 对长文本两头（开头和最新几轮）的记忆最深刻，而处于对话中段的信息极易被“淡化”。</li><li>当你丢给它一堆长代码或长文本后，庞大的计算量会让模型对关键限制条件的“注意力权重”下降。</li></ul><h3 id="2-错误滚雪球对自身生成内容的过度依赖"><a class="markdownIt-Anchor" href="#2-错误滚雪球对自身生成内容的过度依赖"></a> 2. 错误滚雪球：对自身生成内容的“过度依赖”</h3><p>AI 生成下一个字（Token）的依据是<strong>当前所有的历史文本</strong>。这意味着，<strong>它不仅在看你对它说了什么，更在看它自己之前写了什么</strong>。</p><ul><li><strong>滚雪球效应</strong>：如果 AI 在第 5 轮对话中产生了一个微小的逻辑错误或做出了错误的假设，在第 6 轮时，它就会把这个<em>错误</em>当成“既定事实”继续往下推导。</li><li><strong>答案膨胀</strong>：随着你不断纠错，对话里的废话、过时代码和反例越来越多，这些“垃圾信息”污染了上下文，AI 很容易顺着之前错误的思路越走越远，根本“拔不出来”。</li></ul><h3 id="3-指令漂移与复读机倾向"><a class="markdownIt-Anchor" href="#3-指令漂移与复读机倾向"></a> 3. 指令漂移与“复读机”倾向</h3><p>在长对话中，随着上下文拉长，AI 的高频词采样概率会发生微妙的变化。</p><ul><li>如果你和它针对一个 Bug 来回拉扯了 5 次，上下文里就会充斥着大量重复的变量名和错误逻辑。</li><li>这时模型的概率预测会受到严重干扰，它会认为“这些重复的代码片段”是高频、高概率输出，从而开始机械性地复读之前给过的错误答案，或者给出极其相似的无用回复。</li></ul><h3 id="4-缺乏真正的反思与推翻机制"><a class="markdownIt-Anchor" href="#4-缺乏真正的反思与推翻机制"></a> 4. 缺乏真正的“反思与推翻”机制</h3><p>人类在发现自己走错路时，会选择“撕掉重写”，彻底推翻之前的假设。但标准的生成式 AI 是“单向向前”的语言概率预测机器：</p><blockquote><p><strong>AI 的致命伤：</strong> 它被训练的终极目标是“尽快接下文”，而不是“反思历史”。它缺乏一种自主中断、彻底清除历史缓存、重新建立底层逻辑的本能。</p></blockquote><h3 id="怎么破解-ai-的降智周期"><a class="markdownIt-Anchor" href="#怎么破解-ai-的降智周期"></a> 💡 怎么破解 AI 的“降智周期”？</h3><p>既然知道了原理，我们就可以用特定的策略来“驯服”它：</p><ul><li><strong>定期“重构”上下文（Clean Context）</strong>：当对话超过 10 轮，或者代码已经改得面目全非时，不要恋战。新开一个对话窗口，把最新的正确代码、当前的需求以及最核心的限制条件打包成一段话，作为<strong>第一轮</strong>直接喂给它。</li><li><strong>“纠错”不如“否定”</strong>：如果你发现它连续两次没有改对，不要在当前对话里求它“你再看看这行”，直接删掉这两轮错误的对话（如果平台支持），或者开新档。</li><li><strong>开启“深度思考”模式（如果可用）</strong>：如果是面对复杂的算法、Debug 或多变量逻辑，开启 Extended Thinking（扩展思考）这类多步骤推理功能，能有效减少模型在多轮对话中因贪婪解码而导致的“过早下结论”问题。</li></ul>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>P12002 题解</title>
     <link href="/2026/08/16/P12002%20%E9%A2%98%E8%A7%A3/"/>
     <url>/2026/08/16/P12002%20%E9%A2%98%E8%A7%A3/</url>
@@ -85,6 +72,25 @@
     <tags>
       
       <tag>数学定理</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>AI为什么会越聊越傻？</title>
+    <link href="/2026/07/05/AI%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E8%B6%8A%E8%81%8A%E8%B6%8A%E5%82%BB%EF%BC%9F/"/>
+    <url>/2026/07/05/AI%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E8%B6%8A%E8%81%8A%E8%B6%8A%E5%82%BB%EF%BC%9F/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>本篇由 Gemini 生成</p><p>提示词：为什么ai会随着对话的深入越来越傻？</p><p>Gemini 回答后，作者觉得很有道理，故保存</p></blockquote><p>你一定经历过这种痛苦的时刻：刚开始聊的时候，AI 还是个惊为天人的“天才”，但随着对话轮次变多、代码越改越长，它就开始不断犯些低级错误，甚至陷入死循环，变得像个“人工智障”。</p><p>这种“越聊越傻”的现象并不是你的错觉，在 AI 领域它有非常明确的技术底层原因。主要可以归结为以下四个核心瓶颈：</p><h3 id="1-记忆负担与注意力损耗attention-loss"><a class="markdownIt-Anchor" href="#1-记忆负担与注意力损耗attention-loss"></a> 1. 记忆负担与“注意力损耗”（Attention Loss）</h3><p>目前的大语言模型（LLM）都基于 Transformer 架构。虽然很多模型宣称有几十万甚至上百万代币（Tokens）的上下文窗口，但<strong>能记住</strong>和<strong>能精准理解</strong>是两码事。</p><ul><li><strong>“迷失在中间”（Lost in the Middle）</strong>：研究表明，AI 对长文本两头（开头和最新几轮）的记忆最深刻，而处于对话中段的信息极易被“淡化”。</li><li>当你丢给它一堆长代码或长文本后，庞大的计算量会让模型对关键限制条件的“注意力权重”下降。</li></ul><h3 id="2-错误滚雪球对自身生成内容的过度依赖"><a class="markdownIt-Anchor" href="#2-错误滚雪球对自身生成内容的过度依赖"></a> 2. 错误滚雪球：对自身生成内容的“过度依赖”</h3><p>AI 生成下一个字（Token）的依据是<strong>当前所有的历史文本</strong>。这意味着，<strong>它不仅在看你对它说了什么，更在看它自己之前写了什么</strong>。</p><ul><li><strong>滚雪球效应</strong>：如果 AI 在第 5 轮对话中产生了一个微小的逻辑错误或做出了错误的假设，在第 6 轮时，它就会把这个<em>错误</em>当成“既定事实”继续往下推导。</li><li><strong>答案膨胀</strong>：随着你不断纠错，对话里的废话、过时代码和反例越来越多，这些“垃圾信息”污染了上下文，AI 很容易顺着之前错误的思路越走越远，根本“拔不出来”。</li></ul><h3 id="3-指令漂移与复读机倾向"><a class="markdownIt-Anchor" href="#3-指令漂移与复读机倾向"></a> 3. 指令漂移与“复读机”倾向</h3><p>在长对话中，随着上下文拉长，AI 的高频词采样概率会发生微妙的变化。</p><ul><li>如果你和它针对一个 Bug 来回拉扯了 5 次，上下文里就会充斥着大量重复的变量名和错误逻辑。</li><li>这时模型的概率预测会受到严重干扰，它会认为“这些重复的代码片段”是高频、高概率输出，从而开始机械性地复读之前给过的错误答案，或者给出极其相似的无用回复。</li></ul><h3 id="4-缺乏真正的反思与推翻机制"><a class="markdownIt-Anchor" href="#4-缺乏真正的反思与推翻机制"></a> 4. 缺乏真正的“反思与推翻”机制</h3><p>人类在发现自己走错路时，会选择“撕掉重写”，彻底推翻之前的假设。但标准的生成式 AI 是“单向向前”的语言概率预测机器：</p><blockquote><p><strong>AI 的致命伤：</strong> 它被训练的终极目标是“尽快接下文”，而不是“反思历史”。它缺乏一种自主中断、彻底清除历史缓存、重新建立底层逻辑的本能。</p></blockquote><h3 id="怎么破解-ai-的降智周期"><a class="markdownIt-Anchor" href="#怎么破解-ai-的降智周期"></a> 💡 怎么破解 AI 的“降智周期”？</h3><p>既然知道了原理，我们就可以用特定的策略来“驯服”它：</p><ul><li><strong>定期“重构”上下文（Clean Context）</strong>：当对话超过 10 轮，或者代码已经改得面目全非时，不要恋战。新开一个对话窗口，把最新的正确代码、当前的需求以及最核心的限制条件打包成一段话，作为<strong>第一轮</strong>直接喂给它。</li><li><strong>“纠错”不如“否定”</strong>：如果你发现它连续两次没有改对，不要在当前对话里求它“你再看看这行”，直接删掉这两轮错误的对话（如果平台支持），或者开新档。</li><li><strong>开启“深度思考”模式（如果可用）</strong>：如果是面对复杂的算法、Debug 或多变量逻辑，开启 Extended Thinking（扩展思考）这类多步骤推理功能，能有效减少模型在多轮对话中因贪婪解码而导致的“过早下结论”问题。</li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>杂项</tag>
       
     </tags>
     
